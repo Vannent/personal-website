@@ -1,0 +1,158 @@
+@import "./colors";
+@import "./fonts";
+
+.containerLight {
+  background-color: $background;
+  min-width: 100vw;
+  min-height: 90vh;
+  .content {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid $background-dark;
+
+    .greet {
+      font-size: 1.9rem;
+      font-family: $worksans;
+      font-weight: 500;
+      margin-top: 0;
+      margin-bottom: 0;
+      align-self: flex-start;
+      padding-left: 2.3vw;
+      color: $background-dark;
+    }
+    .name {
+      font-size: 8vw;
+      text-transform: uppercase;
+      font-family: $playfair;
+      margin: 0;
+      color: $accent;
+    }
+    .slogan {
+      font-size: 5.6vw;
+      font-style: italic;
+      font-family: $playfair;
+      margin: 0;
+      color: $background-dark;
+    }
+    .paragraph {
+      font-size: 2.4vw;
+      font-family: $worksans;
+      font-weight: 500;
+      margin: 1vh;
+      text-align: center;
+      color: $background-dark;
+
+      .accent {
+        color: $accent;
+      }
+    }
+
+    button {
+      color: $accent;
+      font-family: $worksans;
+      font-weight: 600;
+      border: 3px solid $accent;
+      border-radius: 0;
+      width: 25vw;
+      font-size: 2.4vw;
+    }
+  }
+}
+
+.containerDark {
+  background-color: $background-dark;
+  min-width: 100vw;
+  min-height: 90vh;
+  .content {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid $background;
+
+    .greet {
+      font-size: 1.9rem;
+      font-family: $worksans;
+      font-weight: 500;
+      margin-top: 0;
+      margin-bottom: 0;
+      align-self: flex-start;
+      padding-left: 2.3vw;
+      color: $background;
+    }
+    .name {
+      font-size: 8vw;
+      text-transform: uppercase;
+      font-family: $playfair;
+      margin: 0;
+      color: $accent;
+    }
+    .slogan {
+      font-size: 5.6vw;
+      font-style: italic;
+      font-family: $playfair;
+      margin: 0;
+      color: $background;
+    }
+    .paragraph {
+      font-size: 2.4vw;
+      font-family: $worksans;
+      font-weight: 500;
+      margin: 1vh;
+      text-align: center;
+      color: $background;
+
+      .accent {
+        color: $accent;
+      }
+    }
+
+    button {
+      color: $accent;
+      font-family: $worksans;
+      font-weight: 600;
+      border: 3px solid $accent;
+      border-radius: 0;
+      width: 25vw;
+      font-size: 2.4vw;
+    }
+  }
+}
+
+.containerDark,
+.containerLight {
+  padding: 0vw 10vw;
+}
+
+@media only screen and (max-width: 500px) {
+  .containerDark,
+  .containerLight {
+    .content {
+      .name {
+        font-size: 7vh;
+        text-align: center;
+        line-height: 6vh;
+      }
+
+      .slogan {
+        font-size: 5vh;
+        text-align: center;
+        line-height: 4vh;
+      }
+
+      .paragraph {
+        font-size: 2.5vh;
+      }
+
+      button {
+        margin-top: 3vh;
+        font-size: 2.5vh;
+        width: 50vw;
+      }
+    }
+  }
+}

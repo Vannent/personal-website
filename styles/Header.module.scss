@@ -1,0 +1,92 @@
+@import "./colors";
+@import "./fonts";
+
+.containerLight {
+  display: flex;
+  height: 12vh;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $background;
+
+  .logoContainer {
+    margin-left: 5px;
+  }
+
+  .leftContent {
+    .link {
+      font-family: $playfair;
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-transform: lowercase;
+      color: $background-dark;
+      height: 50px;
+      padding-bottom: 13px;
+    }
+    button {
+      color: $background-dark;
+      height: 50px;
+    }
+  }
+}
+
+.containerDark {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $background-dark;
+  height: 12vh;
+
+  .logoContainer {
+    margin-left: 5px;
+  }
+
+  .leftContent {
+    .link {
+      font-family: $playfair;
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-transform: lowercase;
+      color: $background;
+      padding-bottom: 13px;
+    }
+    button {
+      color: $background;
+    }
+  }
+  .rightContent {
+    .link {
+      font-family: $playfair;
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-transform: lowercase;
+      color: $background;
+    }
+
+    button {
+      color: $background;
+    }
+  }
+}
+
+.containerDark,
+.containerLight {
+  padding: 0vw 10vw;
+}
+
+@media only screen and (max-width: 500px) {
+  .containerLight,
+  .containerDark {
+    .logoContainer {
+      margin-left: 0px;
+
+      img {
+        height: 50px;
+      }
+    }
+    .leftContent {
+      .link {
+        display: none;
+      }
+    }
+  }
+}
