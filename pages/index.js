@@ -1,6 +1,13 @@
 import Head from "next/head";
 import React from "react";
-import { Header, HeroBanner } from "../components";
+import {
+  About,
+  Contact,
+  Header,
+  HeroBanner,
+  Navbar,
+  Projects,
+} from "../components";
 
 const Layout = ({ children }) => {
   return (
@@ -12,6 +19,10 @@ const Layout = ({ children }) => {
         <Header />
       </header>
       <HeroBanner />
+      <About />
+      <Projects />
+      <Contact />
+      <Navbar />
     </>
   );
 };
