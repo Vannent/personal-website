@@ -4,7 +4,7 @@ import { useStateContext } from "../context/StateContext";
 import styles from "../styles/HeroBanner.module.scss";
 
 const HeroBanner = () => {
-  const { showTheme, setShowTheme } = useStateContext();
+  const { showTheme, homeRef } = useStateContext();
   return (
     <div className={showTheme ? styles.containerLight : styles.containerDark}>
       <div className={styles.content}>

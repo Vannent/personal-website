@@ -8,9 +8,20 @@ import { Brightness1, WbSunny } from "@material-ui/icons";
 import { useStateContext } from "../context/StateContext";
 
 const Header = () => {
-  const { showTheme, setShowTheme } = useStateContext();
+  const {
+    showTheme,
+    setShowTheme,
+    handleAboutClick,
+    handleHomeClick,
+    handleContactClick,
+    handleProjectsClick,
+    homeRef,
+  } = useStateContext();
   return (
-    <div className={showTheme ? styles.containerLight : styles.containerDark}>
+    <div
+      className={showTheme ? styles.containerLight : styles.containerDark}
+      ref={homeRef}
+    >
       <div className={styles.logoContainer}>
         {showTheme ? (
           <Image width={85} height={91} src={LogoLight} alt="logo" />
@@ -19,10 +30,18 @@ const Header = () => {
         )}
       </div>
       <div className={styles.leftContent}>
-        <Button className={styles.link}>home</Button>
-        <Button className={styles.link}>about</Button>
-        <Button className={styles.link}>projects</Button>
-        <Button className={styles.link}>contact</Button>
+        <Button className={styles.link} onClick={handleHomeClick}>
+          home
+        </Button>
+        <Button className={styles.link} onClick={handleAboutClick}>
+          about
+        </Button>
+        <Button className={styles.link} onClick={handleProjectsClick}>
+          projects
+        </Button>
+        <Button className={styles.link} onClick={handleContactClick}>
+          contact
+        </Button>
         <IconButton onClick={() => setShowTheme((prev) => !prev)}>
           {showTheme ? <Brightness1 /> : <WbSunny />}
         </IconButton>
