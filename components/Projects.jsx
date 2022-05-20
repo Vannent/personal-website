@@ -11,7 +11,8 @@ import searchio2 from "../assets/searchio2.png";
 import Image from "next/image";
 
 const Projects = () => {
-  const { showTheme, projectsRef } = useStateContext();
+  const { showTheme, projectsRef, swipeBlink, setSwipeBlink } =
+    useStateContext();
   return (
     <div
       className={showTheme ? styles.containerLight : styles.containerDark}
@@ -20,7 +21,7 @@ const Projects = () => {
       <div className={styles.content}>
         <h1 className={styles.title}>Projects</h1>
         <h3 className={styles.featured}>Featured Projects</h3>
-        <div className={styles.blink}>Swipe</div>
+        {swipeBlink && <div className={styles.blink}>Swipe</div>}
         <TinderCard
           className={styles.project}
           preventSwipe={["up", "down", "left", "right"]}
@@ -68,7 +69,11 @@ const Projects = () => {
             </div>
           </div>
         </TinderCard>
-        <TinderCard className={styles.project} preventSwipe={["up", "down"]}>
+        <TinderCard
+          className={styles.project}
+          preventSwipe={["up", "down"]}
+          onSwipe={() => setSwipeBlink((prev) => !prev)}
+        >
           <div className={styles.projectContent}>
             <h3 className={styles.projectTitle}>Searchio</h3>
             <p className={styles.projectParagraph}>

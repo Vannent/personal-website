@@ -10,6 +10,7 @@ const Context = createContext();
 
 export const StateContext = ({ children }) => {
   const [showTheme, setShowTheme] = useState(true);
+  const [swipeBlink, setSwipeBlink] = useState(true);
   const aboutRef = useRef();
   const homeRef = useRef();
   const projectsRef = useRef();
@@ -44,6 +45,8 @@ export const StateContext = ({ children }) => {
         contactRef,
         handleContactClick,
         handleProjectsClick,
+        swipeBlink,
+        setSwipeBlink,
       }}
     >
       {children}
