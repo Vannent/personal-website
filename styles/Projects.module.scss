@@ -267,3 +267,29 @@
     }
   }
 }
+
+@media only screen and (max-height: 800px) {
+  .containerDark,
+  .containerLight {
+    .content {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      .title {
+        margin-top: 0;
+        position: absolute;
+        top: 206vh;
+        align-self: center;
+      }
+      .featured {
+        margin-top: 0;
+        position: absolute;
+        top: 214vh;
+        align-self: center;
+      }
+      .project {
+        height: 75vh;
+      }
+    }
+  }
+}
