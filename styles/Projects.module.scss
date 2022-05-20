@@ -181,12 +181,38 @@
   padding: 0vw 10vw;
   height: 100vh;
   width: 100vw;
+
+  .content {
+    .blink {
+      position: absolute;
+      top: 285vh;
+      font-family: $worksans;
+      text-transform: lowercase;
+      color: $accent;
+      font-weight: 500;
+      letter-spacing: 1px;
+      align-self: center;
+      text-align: center;
+      font-size: 1.8vw;
+      width: 80vw;
+      animation: blinker 2s linear infinite;
+    }
+  }
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
 }
 
 @media only screen and (min-width: 1100px) {
   .containerDark,
   .containerLight {
     .content {
+      .blink {
+        top: 288vh;
+      }
       .project {
         .projectImageWrapper {
           .secondImg {
@@ -225,6 +251,10 @@
   .containerDark,
   .containerLight {
     .content {
+      .blink {
+        top: 299vh;
+        font-size: 2.5vw;
+      }
       .title {
         font-family: $playfair;
         text-transform: uppercase;
@@ -272,6 +302,10 @@
   .containerDark,
   .containerLight {
     .content {
+      .blink {
+        top: 295vh;
+        font-size: 2.5vw;
+      }
       display: flex;
       flex-direction: column;
       justify-content: flex-start;

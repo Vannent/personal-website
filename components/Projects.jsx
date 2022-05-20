@@ -20,6 +20,7 @@ const Projects = () => {
       <div className={styles.content}>
         <h1 className={styles.title}>Projects</h1>
         <h3 className={styles.featured}>Featured Projects</h3>
+        <div className={styles.blink}>Swipe</div>
         <TinderCard
           className={styles.project}
           preventSwipe={["up", "down", "left", "right"]}
