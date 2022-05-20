@@ -327,3 +327,22 @@
     }
   }
 }
+
+@media only screen and (min-width: 1400px) {
+  .containerDark,
+  .containerLight {
+    .content {
+      .title {
+        position: absolute;
+        top: 200vh;
+        align-self: center;
+      }
+      .featured {
+        display: none;
+      }
+      .project {
+        height: 80vh;
+      }
+    }
+  }
+}
