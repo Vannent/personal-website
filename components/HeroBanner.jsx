@@ -1,10 +1,11 @@
 import { Button } from "@material-ui/core";
+import { KeyboardArrowDownTwoTone } from "@material-ui/icons";
 import React from "react";
 import { useStateContext } from "../context/StateContext";
 import styles from "../styles/HeroBanner.module.scss";
 
 const HeroBanner = () => {
-  const { showTheme, homeRef } = useStateContext();
+  const { showTheme, handleAboutClick } = useStateContext();
   return (
     <div className={showTheme ? styles.containerLight : styles.containerDark}>
       <div className={styles.content}>
@@ -18,7 +19,9 @@ const HeroBanner = () => {
           I am currently focusing on growing my skills as a developer and{" "}
           <b className={styles.accent}>gathering experience.</b>
         </p>
-        <Button variant="outlined">Learn More</Button>
+        <Button variant="outlined" onClick={handleAboutClick}>
+          Learn More
+        </Button>
       </div>
     </div>
   );

@@ -1,7 +1,11 @@
+@import "./colors";
+@import "./fonts";
+
 html,
 body {
   padding: 0;
-  margin: 0;
+  margin: 0vw 5vw;
+  max-width: 100vw;
 }
 
 a {

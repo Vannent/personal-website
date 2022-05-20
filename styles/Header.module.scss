@@ -1,90 +1,48 @@
 @import "./colors";
 @import "./fonts";
 
-.containerLight {
+.containerLight,
+.containerDark {
   display: flex;
-  height: 12vh;
-  justify-content: space-between;
   align-items: center;
-  background-color: $background;
+  justify-content: space-between;
+  margin-top: 1vh;
+  height: 10vh;
 
-  .logoContainer {
-    margin-left: 5px;
-  }
-
-  .leftContent {
+  .content {
     .link {
       font-family: $playfair;
-      font-size: 1.5rem;
-      font-weight: bold;
+      font-size: 1.3rem;
       text-transform: lowercase;
-      color: $background-dark;
-      height: 50px;
       padding-bottom: 13px;
+      font-weight: 700;
     }
+  }
+}
+
+.containerLight {
+  .content {
+    .link,
     button {
       color: $background-dark;
-      height: 50px;
     }
   }
 }
 
 .containerDark {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: $background-dark;
-  height: 12vh;
-
-  .logoContainer {
-    margin-left: 5px;
-  }
-
-  .leftContent {
-    .link {
-      font-family: $playfair;
-      font-size: 1.5rem;
-      font-weight: bold;
-      text-transform: lowercase;
-      color: $background;
-      padding-bottom: 13px;
-    }
-    button {
-      color: $background;
-    }
-  }
-  .rightContent {
-    .link {
-      font-family: $playfair;
-      font-size: 1.5rem;
-      font-weight: bold;
-      text-transform: lowercase;
-      color: $background;
-    }
-
+  .content {
+    .link,
     button {
       color: $background;
     }
   }
 }
 
-.containerDark,
-.containerLight {
-  padding: 0vw 10vw;
-}
-
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 450px) {
   .containerLight,
   .containerDark {
-    height: 15vh;
-    .logoContainer {
-      margin-left: 0px;
-
-      img {
-        height: 50px;
-      }
-    }
-    .leftContent {
+    .content {
+      text-align: center;
       .link {
         display: none;
       }

@@ -17,6 +17,7 @@ const Header = () => {
     handleProjectsClick,
     homeRef,
   } = useStateContext();
+
   return (
     <div
       className={showTheme ? styles.containerLight : styles.containerDark}
@@ -29,7 +30,7 @@ const Header = () => {
           <Image width={85} height={91} src={LogoDark} alt="logo" />
         )}
       </div>
-      <div className={styles.leftContent}>
+      <div className={styles.content}>
         <Button className={styles.link} onClick={handleHomeClick}>
           home
         </Button>

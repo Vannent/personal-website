@@ -11,9 +11,9 @@ const About = () => {
       className={showTheme ? styles.containerLight : styles.containerDark}
       ref={aboutRef}
     >
+      <h1 className={styles.title}>About</h1>
       <div className={styles.content}>
         <div className={styles.leftContent}>
-          <h1 className={styles.title}>About</h1>
           <p className={styles.paragraph}>
             From the very moment I touched a computer, <b>I was hooked.</b> The
             possibility of learning anything was fascinating to my younger self.

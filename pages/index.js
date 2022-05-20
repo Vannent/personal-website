@@ -8,8 +8,10 @@ import {
   Navbar,
   Projects,
 } from "../components";
+import { useStateContext } from "../context/StateContext";
 
 const Layout = ({ children }) => {
+  const { showTheme } = useStateContext();
   return (
     <>
       <Head>
@@ -23,6 +25,21 @@ const Layout = ({ children }) => {
       <Projects />
       <Contact />
       <Navbar />
+      {showTheme ? (
+        <style jsx global>{`
+          html,
+          body {
+            background: #d2d3d3;
+          }
+        `}</style>
+      ) : (
+        <style jsx global>{`
+          html,
+          body {
+            background: #2d3032;
+          }
+        `}</style>
+      )}
     </>
   );
 };

@@ -23,8 +23,8 @@ const Contact = () => {
             <div className={styles.link}>Github</div>
           </Link>
         </div>
-        <div className={styles.name}>robced</div>
       </div>
+      <div className={styles.name}>robced</div>
     </div>
   );
 };

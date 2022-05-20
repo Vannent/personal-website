@@ -28,6 +28,14 @@ const Projects = () => {
         >
           <div className={styles.projectContent}>
             <h3 className={styles.projectTitle}>Chatter</h3>
+            <div className={styles.projectImageWrapper}>
+              <div className={styles.firstImg}>
+                <Image src={chatter} layout={"intrinsic"} alt="project image" />
+              </div>
+              <div className={styles.secondImg}>
+                <Image src={chatter} layout={"intrinsic"} alt="project image" />
+              </div>
+            </div>
             <p className={styles.projectParagraph}>
               A real-time chatting application that utilizes Stream Chat API to
               handle messages with the ability to create channels.
@@ -36,20 +44,29 @@ const Projects = () => {
               <div>Node.js</div>
               <div>React.js</div>
               <div>Express.js</div>
-            </div>
-          </div>
-          <div className={styles.projectImageWrapper}>
-            <div className={styles.firstImg}>
-              <Image src={chatter} layout={"intrinsic"} alt="project image" />
-            </div>
-            <div className={styles.secondImg}>
-              <Image src={chatter} layout={"intrinsic"} alt="project image" />
+              <div>Material-UI</div>
             </div>
           </div>
         </TinderCard>
         <TinderCard className={styles.project} preventSwipe={["up", "down"]}>
           <div className={styles.projectContent}>
             <h3 className={styles.projectTitle}>Bookerei</h3>
+            <div className={styles.projectImageWrapper}>
+              <div className={styles.firstImg}>
+                <Image
+                  src={bookerei}
+                  layout={"intrinsic"}
+                  alt="project image"
+                />
+              </div>
+              <div className={styles.secondImg}>
+                <Image
+                  src={bookerei2}
+                  layout={"intrinsic"}
+                  alt="project image"
+                />
+              </div>
+            </div>
             <p className={styles.projectParagraph}>
               An e-commerce application that allows purchases with Stripe
               implementation, using Sanity for the database of books.
@@ -58,14 +75,8 @@ const Projects = () => {
               <div>Next.js</div>
               <div>React.js</div>
               <div>SCSS</div>
-            </div>
-          </div>
-          <div className={styles.projectImageWrapper}>
-            <div className={styles.firstImg}>
-              <Image src={bookerei} layout={"intrinsic"} alt="project image" />
-            </div>
-            <div className={styles.secondImg}>
-              <Image src={bookerei2} layout={"intrinsic"} alt="project image" />
+              <div>Material-UI</div>
+              <div>Stripe</div>
             </div>
           </div>
         </TinderCard>
@@ -76,6 +87,22 @@ const Projects = () => {
         >
           <div className={styles.projectContent}>
             <h3 className={styles.projectTitle}>Searchio</h3>
+            <div className={styles.projectImageWrapper}>
+              <div className={styles.firstImg}>
+                <Image
+                  src={searchio}
+                  layout={"intrinsic"}
+                  alt="project image"
+                />
+              </div>
+              <div className={styles.secondImg}>
+                <Image
+                  src={searchio2}
+                  layout={"intrinsic"}
+                  alt="project image"
+                />
+              </div>
+            </div>
             <p className={styles.projectParagraph}>
               A minimal search engine that utilizes Google{"'"}s API to render
               searches for images and sites. Along with widgets that display
@@ -85,14 +112,7 @@ const Projects = () => {
               <div>Next.js</div>
               <div>React.js</div>
               <div>SCSS</div>
-            </div>
-          </div>
-          <div className={styles.projectImageWrapper}>
-            <div className={styles.firstImg}>
-              <Image src={searchio} layout={"intrinsic"} alt="project image" />
-            </div>
-            <div className={styles.secondImg}>
-              <Image src={searchio2} layout={"intrinsic"} alt="project image" />
+              <div>Material-UI</div>
             </div>
           </div>
         </TinderCard>

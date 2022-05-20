@@ -1,108 +1,100 @@
 @import "./colors";
 @import "./fonts";
 
-.containerLight {
-  background-color: $background;
+.containerLight,
+.containerDark {
   display: flex;
-  align-items: center;
   justify-content: center;
-  color: $background-dark;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+
+  .title {
+    font-family: $playfair;
+    text-transform: uppercase;
+    letter-spacing: 0.3vw;
+    font-size: 4vw;
+    margin: 0;
+  }
 
   .content {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 5vw;
+    width: 100%;
+    gap: 2vw;
+
+    .leftContent {
+      width: 60%;
+      .paragraph {
+        font-family: $worksans;
+        font-size: 1.7vw;
+        line-height: 1.7vw;
+        margin: 0;
+      }
+    }
 
     .rightContent {
+      width: 40%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
       .imgContainer {
+        width: fit-content;
         padding: 1vw;
         border: 3px solid $background-dark;
       }
     }
-
-    .leftContent {
-      width: 70%;
-
-      .title {
-        font-family: $playfair;
-        text-transform: uppercase;
-        letter-spacing: 0.3vw;
-        font-size: 4vw;
-        margin: 0;
-      }
-
-      .paragraph {
-        font-family: $worksans;
-        font-size: 1.7vw;
-        line-height: 2vw;
-      }
-    }
   }
+}
+
+.containerLight {
+  color: $background-dark;
 }
 
 .containerDark {
-  background-color: $background-dark;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   color: $background;
 
   .content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5vw;
-
     .rightContent {
       .imgContainer {
-        padding: 1vw;
         border: 3px solid $background;
-      }
-    }
-
-    .leftContent {
-      width: 70%;
-
-      .title {
-        font-family: $playfair;
-        text-transform: uppercase;
-        letter-spacing: 0.3vw;
-        font-size: 4vw;
-        margin: 0;
-      }
-
-      .paragraph {
-        font-family: $worksans;
-        font-size: 1.7vw;
-        line-height: 2vw;
       }
     }
   }
 }
 
-.containerDark,
-.containerLight {
-  padding: 0vw 10vw;
-  height: 100vh;
-  width: 100vw;
+@media only screen and (max-width: 900px) {
+  .containerDark,
+  .containerLight {
+    padding-bottom: 10vh;
+    .title {
+      font-size: 10vw;
+    }
+    .content {
+      .leftContent {
+        .paragraph {
+          font-size: 2.3vw;
+          line-height: 2.1vw;
+        }
+      }
+    }
+  }
 }
 
 @media only screen and (max-width: 500px) {
   .containerDark,
   .containerLight {
+    .title {
+      font-size: 10vw;
+      text-align: center;
+      margin: 0;
+      margin-bottom: -5vh;
+    }
     .content {
       .leftContent {
         width: 100%;
-
-        .title {
-          font-family: $playfair;
-          text-transform: uppercase;
-          letter-spacing: 0.3vw;
-          font-size: 10vw;
-          text-align: center;
-          margin: 0;
-        }
 
         .paragraph {
           font-family: $worksans;
