@@ -142,7 +142,7 @@
   }
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (min-width: 450px) and (max-width: 900px) {
   .containerDark,
   .containerLight {
     .content {
